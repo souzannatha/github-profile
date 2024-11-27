@@ -1,38 +1,15 @@
-"use client";
-
 import styled from "styled-components";
 
-export function LoginPage() {
-  return (
-    <Container>
-      <LoginBox>
-        <Title>Bem-vindo</Title>
-        <Subtitle>Faça login para acessar o sistema</Subtitle>
-        <Form>
-          <InputWrapper>
-            <Input type="text" placeholder="Usuário" />
-          </InputWrapper>
-          <InputWrapper>
-            <Input type="password" placeholder="Senha" />
-          </InputWrapper>
-          <Button>Entrar</Button>
-        </Form>
-      </LoginBox>
-    </Container>
-  );
-}
-
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
   background-color: #0a1128;
-  overflow: hidden; /* Evita rolagem indesejada */
 `;
 
-const LoginBox = styled.div`
+export const LoginBox = styled.div`
   background-color: #1c2237;
   padding: 40px;
   border-radius: 8px;
@@ -42,30 +19,30 @@ const LoginBox = styled.div`
   max-width: 400px;
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   color: #ffffff;
   font-size: 24px;
   margin-bottom: 10px;
 `;
 
-const Subtitle = styled.p`
+export const Subtitle = styled.p`
   color: #a8b3cf;
   margin-bottom: 20px;
   font-size: 14px;
 `;
 
-const Form = styled.form`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
 `;
 
-const InputWrapper = styled.div`
+export const InputWrapper = styled.div`
   position: relative;
   width: 100%;
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
   width: 100%;
   padding: 10px 15px;
   font-size: 14px;
@@ -85,7 +62,7 @@ const Input = styled.input`
   }
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   width: 100%;
   max-width: 430px;
   padding: 10px;
