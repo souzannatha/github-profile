@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+GitHub Profile Research
 
-## Getting Started
+Este projeto permite pesquisar informações detalhadas sobre perfis de usuários no GitHub. Ele fornece dados como repositórios públicos, seguidores, contribuições e muito mais, apresentando uma interface simples e intuitiva para explorar essas informações.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔥 Funcionalidades
+Pesquisa de perfis pelo nome de usuário do GitHub.
+Exibição de informações como:
+Nome e biografia.
+Avatar do usuário.
+Quantidade de seguidores e seguidos.
+Listagem dos repositórios públicos.
+Quantidade de estrelas nos repositórios.
+Interface responsiva para diferentes tamanhos de dispositivos.
+🛠️ Tecnologias Utilizadas
+Frontend: React (ou outra tecnologia, especifique aqui).
+Estilo: Tailwind CSS (ou a tecnologia utilizada no projeto).
+API: GitHub REST API v3.
+🚀 Como Acessar
+Clone o repositório:
+bash
+Copiar código
+git clone https://github.com/souzannatha/github-profile.git
+Acesse o diretório do projeto:
+bash
+Copiar código
+cd github-profile
+Instale as dependências:
+bash
+Copiar código
+npm install
+Inicie o projeto:
+bash
+Copiar código
+npm start
+Acesse a aplicação em seu navegador: http://localhost:3000.
+Login na aplicação:
+Usuário: admin
+Senha: admin123
