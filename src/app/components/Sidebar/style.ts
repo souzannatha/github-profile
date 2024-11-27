@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// Contêiner da Sidebar
+// Sidebar Container
 export const SidebarContainer = styled.aside<{ isExpanded: boolean }>`
   width: ${({ isExpanded }) => (isExpanded ? "16rem" : "5rem")};
   height: 100vh;
@@ -11,13 +11,9 @@ export const SidebarContainer = styled.aside<{ isExpanded: boolean }>`
   display: flex;
   flex-direction: column;
   position: fixed;
-  /* Adicionando acessibilidade */
-  &[aria-expanded="true"] {
-    width: 16rem;
-  }
-  &[aria-expanded="false"] {
-    width: 5rem;
-  }
+  top: 4rem; /* Ajuste para ficar abaixo do header */
+  left: 0;
+  z-index: 10; /* Garante que a sidebar apareça sobre o conteúdo */
 `;
 
 export const Header = styled.div`
@@ -40,9 +36,12 @@ export const ToggleButton = styled.button`
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
 `;
 
-// Navegação
 export const Nav = styled.nav`
   flex: 1;
   display: flex;
@@ -76,4 +75,5 @@ export const Footer = styled.footer`
   padding: 1rem;
   font-size: 0.8rem;
   color: #6c757d;
+  margin-top: auto;
 `;
