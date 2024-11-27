@@ -18,15 +18,15 @@ export const MainContent = styled.main`
   background-color: #1c2237;
   overflow-y: auto;
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  justify-content: center;
+  align-items: center;
 `;
 
 export const SearchBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px; /* Espaçamento entre input e botão */
+  gap: 16px;
 `;
 
 export const Input = styled.input`
@@ -49,5 +49,36 @@ export const Button = styled.button`
 
   &:hover {
     background-color: #0056b3;
+  }
+`;
+
+export const UserInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+
+  img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;

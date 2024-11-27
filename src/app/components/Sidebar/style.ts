@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-// Sidebar Container
-export const SidebarContainer = styled.aside<{ isExpanded: boolean }>`
-  width: ${({ isExpanded }) => (isExpanded ? "16rem" : "5rem")};
+export const SidebarContainer = styled.aside<{ isOpen: boolean }>`
+  width: ${({ isOpen }) => (isOpen ? "16rem" : "5rem")};
   height: 100vh;
   background-color: #f8f9fa;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -11,9 +10,8 @@ export const SidebarContainer = styled.aside<{ isExpanded: boolean }>`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 4rem; /* Ajuste para ficar abaixo do header */
-  left: 0;
-  z-index: 10; /* Garante que a sidebar apareça sobre o conteúdo */
+  z-index: 10;
+  margin-top: 64px;
 `;
 
 export const Header = styled.div`
@@ -25,8 +23,8 @@ export const Header = styled.div`
   color: white;
 `;
 
-export const Title = styled.h1<{ isExpanded: boolean }>`
-  font-size: ${({ isExpanded }) => (isExpanded ? "1.2rem" : "1rem")};
+export const Title = styled.h1`
+  font-size: 1.2rem;
   white-space: nowrap;
 `;
 
@@ -60,14 +58,9 @@ export const NavItem = styled.div`
   }
 `;
 
-export const Icon = styled.span<{ isExpanded: boolean }>`
+export const Icon = styled.span`
   font-size: 1.5rem;
-  margin-right: ${({ isExpanded }) => (isExpanded ? "1rem" : "0")};
-`;
-
-export const Text = styled.span`
-  font-size: 1rem;
-  white-space: nowrap;
+  margin-right: 1rem;
 `;
 
 export const Footer = styled.footer`

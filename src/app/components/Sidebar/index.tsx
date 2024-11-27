@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
-  Header,
   SidebarContainer,
+  Header,
   Title,
   ToggleButton,
   Nav,
@@ -11,34 +11,31 @@ import {
 } from "./style";
 
 export function Sidebar() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <SidebarContainer isExpanded={isExpanded}>
+    <SidebarContainer isOpen={isOpen}>
       <Header>
-        <Title isExpanded={isExpanded}>
-          {isExpanded ? "Meu Dashboard" : "MD"}
-        </Title>
-        <ToggleButton onClick={() => setIsExpanded(!isExpanded)}>
-          ☰
-        </ToggleButton>
+        <Title>{isOpen ? "Meu Dashboard" : "MD"}</Title>
+        <ToggleButton onClick={() => setIsOpen(!isOpen)}>☰</ToggleButton>
       </Header>
 
       <Nav>
         <NavItem>
-          <Icon isExpanded={isExpanded}>🏠</Icon>
-          {isExpanded && <span>Home</span>}
+          <Icon>🏠</Icon>
+          {isOpen && <span>Home</span>}
         </NavItem>
         <NavItem>
-          <Icon isExpanded={isExpanded}>📁</Icon>
-          {isExpanded && <span>Projetos</span>}
+          <Icon>📁</Icon>
+          {isOpen && <span>Projetos</span>}
         </NavItem>
         <NavItem>
-          <Icon isExpanded={isExpanded}>⚙️</Icon>
-          {isExpanded && <span>Configuração</span>}
+          <Icon>⚙️</Icon>
+          {isOpen && <span>Configuração</span>}
         </NavItem>
       </Nav>
-      <Footer>{isExpanded ? "© 2024 Meu Dashboard" : "© 2024"}</Footer>
+
+      <Footer>{isOpen ? "© 2024 Meu Dashboard" : "© 2024"}</Footer>
     </SidebarContainer>
   );
 }
